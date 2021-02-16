@@ -148,8 +148,9 @@ void Judul(){
 	gotoxy(98,12); printf("ÛÛÛÛÛ\n");
 
 
-	gotoxy(76,15);printf("TIC-TAC-TOE");
-	gotoxy(67,16);printf("MULAI PERMAINAN DARI MANA NIH?");
+	gotoxy(76,14);printf("TIC-TAC-TOE");
+	gotoxy(67,16);printf("S E L A M A T    D A T A N G !");
+	gotoxy(67,18);printf("MULAI PERMAINAN DARI MANA NIH?");
 	
 /*END PROCEDURE_JUDUL*/
 }
