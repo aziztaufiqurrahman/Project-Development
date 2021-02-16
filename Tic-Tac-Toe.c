@@ -73,6 +73,7 @@ void Sulit3();
 void Sulit5();
 void Sulit7();
 void timer(float persentase);
+void setcolor(unsigned short color);
 
 /*===========================================================================================================================================
 ===========================================================================================================================================*/
@@ -146,12 +147,9 @@ void Judul(){
 	gotoxy(62,12); printf("ÛÛÛÛÛ\n");
 	gotoxy(80,12); printf("ÛÛÛÛÛ\n");
 	gotoxy(98,12); printf("ÛÛÛÛÛ\n");
-	/*END TAMPILAN CCC*/
 	
-	/*TAMPILAN CIRCLE CROSS CHALLANGE*/
 	gotoxy(76,15);printf("TIC-TAC-TOE");
 	gotoxy(67,16);printf("MULAI PERMAINAN DARI MANA NIH?");
-	/*END TAMPILAN CIRCLE CROSS CHALLANGE*/
 	
 /*END PROCEDURE_JUDUL*/
 }
