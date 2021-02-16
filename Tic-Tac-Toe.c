@@ -267,7 +267,7 @@ void GuntingKertasBatu(){
     system("CLS"); //berfungsi untuk clear screen atau membersihkan layar(mengosongkan layar)
 
         musuh = rand()%3; //inisialisasi dari pilihan musuh yang acak dari 0 hingga 2
-        gotoxy(70,18);printf("PILIHLAH TANGANMU : \n");
+        gotoxy(70,18);printf("MAU PILIH YANG MANA? \n");
         gotoxy(70,20);printf("[1] Gunting\n");
         gotoxy(70,21);printf("[2] Batu\n");
         gotoxy(70,22);printf("[3] Kertas\n");
