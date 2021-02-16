@@ -73,7 +73,6 @@ void Sulit3();
 void Sulit5();
 void Sulit7();
 void timer(float persentase);
-void setcolor(unsigned short color);
 
 /*===========================================================================================================================================
 ===========================================================================================================================================*/
@@ -147,7 +146,8 @@ void Judul(){
 	gotoxy(62,12); printf("ÛÛÛÛÛ\n");
 	gotoxy(80,12); printf("ÛÛÛÛÛ\n");
 	gotoxy(98,12); printf("ÛÛÛÛÛ\n");
-	
+
+
 	gotoxy(76,15);printf("TIC-TAC-TOE");
 	gotoxy(67,16);printf("MULAI PERMAINAN DARI MANA NIH?");
 	
@@ -163,7 +163,7 @@ void PilihLevel(){
 	
 	gotoxy(70,18);printf("PILIH LEVEL");
 	gotoxy(70,20);printf("[1] MUDAH\n");
-	gotoxy(70,21);printf("[2] MENENGAH\n");
+	gotoxy(70,21);printf("[2] SEDANG\n");
 	gotoxy(70,22);printf("[3] SULIT\n");
 	gotoxy(70,23);printf("[0] Menu Utama\n");
 	gotoxy(70,25);printf("Masukkan Pilihan :\n");
@@ -495,22 +495,21 @@ int CekMenang7 (const int board [50]) {
 
 int minimax(int board[10], int player) {
 
-    //How is the position like for player (their turn) on board?
     int winner = CekMenang(board);
     if(winner != 0) return winner*player;
 
     int move = -1;
-    int score = -2;//Losing moves are preferred to no move
+    int score = -2;
     int i;
-    for(i = 1; i < 10; ++i) {//For all moves,
-        if(board[i] == 0) {//If legal,
-            board[i] = player;//Try the move
+    for(i = 1; i < 10; ++i) {
+        if(board[i] == 0) {
+            board[i] = player;
             int thisScore = -minimax(board, player*-1);
             if(thisScore > score) {
                 score = thisScore;
                 move = i;
-            }//Pick the one that's worst for the opponent
-            board[i] = 0;//Reset board after try
+            }
+            board[i] = 0;
         }
     }
     if(move == -1) return 0;
@@ -533,8 +532,8 @@ int minimax5(int board[26], int player) {
             if(thisScore > score) {
                 score = thisScore;
                 move = i;
-            }//Pick the one that's worst for the opponent
-            board[i] = 0;//Reset board after try
+            }
+            board[i] = 0;
         }
     }
     if(move == -1) return 0;
@@ -1704,7 +1703,8 @@ void loading() {
  
  /*BEGIN PROCEDURE LOADING*/
 	int x;
-	gotoxy(75,20); printf("Harap Tunggu..");
+	gotoxy(74,19); printf ("Yakin Sudah Siap?");
+	gotoxy(75,20); printf("Mohon Bersabar..");
 
 	for(x=65;x<=67;x++){
 		gotoxy(x,22);printf("Û\n");
@@ -1739,8 +1739,8 @@ void MenuUtama() {
 	Judul();
 	
 	gotoxy(70,20);printf("[1] PERMAINAN BARU\n");
-	gotoxy(70,21);printf("[2] CARA & ATURAN BERMAIN\n");
-	gotoxy(70,22);printf("[3] PAPAN PERINGKAT\n");
+	gotoxy(70,21);printf("[2] CARA BERMAIN\n");
+	gotoxy(70,22);printf("[3] HIGH SCORE\n");
 	gotoxy(70,23);printf("[4] TENTANG PERMAINAN\n");
 	gotoxy(70,24);printf("[0] KELUAR\n");
 	gotoxy(70,26);printf("Masukkan Pilihan : \n");
