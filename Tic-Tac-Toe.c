@@ -1,5 +1,5 @@
 /*Program	: Aplikasi Permainan Tic-Tac-toe.c
-Deskripsi 	: Aplikasi permainan tic tac toe dengan pilihan papan 3x3,5x5, dan 7x7. Mode permainan pada aplikasi ini bisa dengan komputer atau multipemain.
+Deskripsi 	: Aplikasi permainan tic tac toe dengan pilihan papan 3x3,5x5, dan 7x7. Mode permainan pada aplikasi ini bisa dengan komputer.
 			: Pada mode komputer, disisipkan kecerdasan dengan metode minimax. 
 Author		: Muhammad Aziz Taufiqurrahman - 201524014
 			: Hafiz Maulana Azhar - 201524009
